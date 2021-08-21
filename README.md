@@ -1,5 +1,5 @@
 # The Talent Retention Predictor App
-## Machine Learning Model to predict the retention of employees 
+## *Machine Learning Model to predict the retention of employees*
 
 <p align="center">
 <img src="https://github.com/Yazz-01/Predicting_Employees_Retention/blob/main/static/img/screenshot.png" width="900"/>
