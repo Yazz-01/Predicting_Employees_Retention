@@ -17,7 +17,7 @@ Create a Machine Learning Model to predict the retention of employees using a da
 
 ## How to run the app
 2 options:
-1. **[Fully deployed online version](https://dataviz-ecobici.herokuapp.com/)**:
+1. **[Fully deployed online version](https://dataviz-ecobici.herokuapp.com/)**: *Coming soon*
 2. Run locally:
      1. Clone this repository
      2. In the main repository folder, run "python3 XXXX.py" in your terminal
@@ -25,15 +25,15 @@ Create a Machine Learning Model to predict the retention of employees using a da
      4. Browse the website...
 
 ## Original data Source 📁 
-The original data can be found at [**Kaggle**](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+The original data can be found here at [**Kaggle**](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset)
 
 ## ETL Process 
 #### Extract
-- Coming soon
+- *Coming soon*
 #### Transform
-- Coming soon
+- *Coming soon*
 #### Load
-- Coming soon
+- *Coming soon*
 
 ## Languages & Tools Used 🖥️
 - Python
@@ -44,7 +44,7 @@ The original data can be found at [**Kaggle**](https://www.kaggle.com/pavansubha
 - CSS 
 
 ## Conclusion summary 
-- Coming soon
+- *Coming soon*
 
 
 
