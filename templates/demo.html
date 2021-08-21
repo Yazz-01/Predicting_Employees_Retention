@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>The Talent Retention Predictor App</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon.png" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.4.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="../static/img/logo.png" alt="">
+        <span>The Talent Retention Predicter App™</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted scrollto" href="#">Try the Demo</a></li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="model.html">The Machine Learning Modelling</a></li>
+              <li><a href="visualization.html">Data Deep Dive Visualizations</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="index.html#team">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<!-- BEGIN MAIN -->
+  <main id="main"> 
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Demo</li>
+        </ol>
+        <h2>Demo</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    
+    <div class="container mt-2">
+    <header class="section-header">
+
+      <p>Enter the profile of an employee below to calculate the retention riks.
+      </p>
+    </header>
+
+    <!-- DEMO ADD HERE -->
+
+      <div class="row mt-2">
+        <div class="col-md-4">
+        <aside class="filters">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">Enter employee profile</div>
+            <div class="panel-body">
+              <form>                  
+                <div class="form-group text">
+                  <ul class="list-group" id="filters">
+
+                    <!-- AGE FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="selAge" type="submit">
+                        <option value="" disabled selected>Employee age:</option>
+                          <option value="18" selected>18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                          <option value="32">32</option>
+                          <option value="33">33</option>
+                          <option value="34">34</option>
+                          <option value="35">35</option>
+                          <option value="36">36</option>
+                          <option value="37">37</option>
+                          <option value="38">38</option>
+                          <option value="39">39</option>
+                          <option value="40">40</option>
+                          <option value="41">41</option>
+                          <option value="42">42</option>
+                          <option value="43">43</option>
+                          <option value="44">44</option>
+                          <option value="45">45</option>
+                          <option value="46">46</option>
+                          <option value="47">47</option>
+                          <option value="48">48</option>
+                          <option value="49">49</option>
+                          <option value="50">50</option>
+                          <option value="51">51</option>
+                          <option value="52">52</option>
+                          <option value="53">53</option>
+                          <option value="54">54</option>
+                          <option value="55">55</option>
+                          <option value="56">56</option>
+                          <option value="57">57</option>
+                          <option value="58">58</option>
+                          <option value="59">59</option>
+                          <option value="60">60</option>
+                        </select>
+                      </div> 
+                    </li>
+
+                    <!-- GENDER FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="gender" type="submit">
+                          <option value="" disabled selected>Employee gender:</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="">Unkown</option>
+                        </select>
+                      </div> 
+                    </li>
+
+                    <!-- STATE FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="state" type="submit">
+                          <option value="" disabled selected>Criteria 3</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+
+                    <!-- COUNTRY FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <!-- <label for="country">Silter by country:</label> -->
+                        <select class="form-control" id="country" type="submit">
+                          <option value="" disabled selected>Criteria 4</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+                    
+                    <!-- COUNTRY FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="shape" type="submit">
+                          <option value="" disabled selected>Criteria 5</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+
+                    <!-- COUNTRY FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="shape" type="submit">
+                          <option value="" disabled selected>Criteria 6</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+
+                    <!-- STATE FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="state" type="submit">
+                          <option value="" disabled selected>Criteria 7</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+
+                    <!-- COUNTRY FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <!-- <label for="country">Silter by country:</label> -->
+                        <select class="form-control" id="country" type="submit">
+                          <option value="" disabled selected>Criteria 8</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+                    
+                    <!-- COUNTRY FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="shape" type="submit">
+                          <option value="" disabled selected>Criteria 9</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+
+                    <!-- COUNTRY FILTER -->
+                    <li class="filter list-group-item">
+                      <div class="form-group">
+                        <select class="form-control" id="shape" type="submit">
+                          <option value="" disabled selected>Criteria 10</option>
+                          <!-- Options get inserted here by app.js -->
+                        </select>
+                      </div> 
+                    </li>
+
+                  </ul>
+                </div>
+
+                <!-- RESET BUTTON BUTTON -->
+                <!-- <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button> -->
+                <div class="text-center">
+                  <button id="reset-btn" type="button" class="btn btn-default text-center">Reset the Filter</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">Results</div>
+          <div class="panel-body">
+        <p>Results go here</p>
+        
+        
+          </div>
+      </div>
+    </div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/vendor/purecounter/purecounter.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
