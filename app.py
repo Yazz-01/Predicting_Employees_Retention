@@ -43,8 +43,8 @@ def viajesdata(TrainingTimesLastYear,DistanceFromHome,JobSatisfaction,MaritalSta
     data={'TrainingTimesLastYear':[TrainingTimesLastYear],
     'DistanceFromHome':[DistanceFromHome],
     'JobSatisfaction':[JobSatisfaction],
-    'TotalWorkingYears':[TotalWorkingYears],
     'MaritalStatus':[MaritalStatus],
+    'TotalWorkingYears':[TotalWorkingYears],
     'MonthlyIncome':[MonthlyIncome]
     }
     data=pd.DataFrame(data)
