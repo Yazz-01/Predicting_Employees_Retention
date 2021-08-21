@@ -6,15 +6,13 @@
 </p>
 
 ## Team Members
-* [Kenneth Andersen](https://github.com/kennethcandersen)
-* [Juan Carlos Cortez](https://www.linkedin.com/in/juancarloscortezperez/)
 * [Salvador del Cos](https://github.com/Fispit)
-* [Marcelo Flores](https://www.linkedin.com/in/marcelo-flores-b747b87a/)
+* [Kenneth Andersen](https://github.com/kennethcandersen)
 * [Yazmin Rodriguez](https://github.com/Yazz-01)
+* [Juan Carlos Cortez](https://www.linkedin.com/in/juancarloscortezperez/)
+* [Marcelo Flores](https://www.linkedin.com/in/marcelo-flores-b747b87a/)
 
-## Project summary 
-
-### Project Goal
+## Project Goal
 Create a Machine Learning Model to predict the retention of employees using a data set from IBM. 
 
 ## How to run the app
