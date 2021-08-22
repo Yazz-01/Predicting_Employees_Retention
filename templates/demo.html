@@ -15,7 +15,9 @@
   <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -65,8 +67,8 @@
     </div>
   </header><!-- End Header -->
 
-<!-- BEGIN MAIN -->
-  <main id="main"> 
+  <!-- BEGIN MAIN -->
+  <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
@@ -80,144 +82,119 @@
 
       </div>
     </section><!-- End Breadcrumbs -->
-    
+
     <div class="container mt-2">
-    <header class="section-header">
+      <header class="section-header">
 
-      <p>Case Study: IBM
-      </p>
-    </header>
+        <p>Case Study: IBM
+        </p>
+      </header>
 
-    <div class="row text-center">
-      <h3>Instructions</h3>
-      <p>Enter information for a hypothetical IBM employee and the model will produce a report with the retention prediction.  
-      </p>
-<hr>
-    </div>
-    <div class="row">
-
-      <!-- BEGIN Left-Hand Criteria Options -->
-      <div class="col-md-3">
-
-        <label for="demoInput1" class="form-label font-weight-bold">1. Training Time in Last Year</label>
-        <input type="range" value="3" class="form-range" min="0" max="6" step="1" id="demoInput1"
-        oninput="this.nextElementSibling.value = this.value"> 
-        Current Selection: <output>3</output>
-
-      <hr>
-
-        <label for="demoInput2" class="form-label">2. Distance From Home</label>
-        <input type="range" value="15" class="form-range" min="1" max="29" step="1" id="demoInput2"
-        oninput="this.nextElementSibling.value = this.value"> 
-        Current Selection: <output>15</output> 
-
+      <div class="row text-center">
+        <h3>Instructions</h3>
+        <p>Enter information for a hypothetical IBM employee and the model will produce a report with the retention
+          prediction.
+        </p>
         <hr>
-
-        <label for="demoInput3" class="form-label">3. Job Satisfaction</label>
-        <input type="range" value="2" class="form-range" min="1" max="4" step="1" id="demoInput3"
-        oninput="this.nextElementSibling.value = this.value"> 
-        Current Selection: <output>2</output> 
-         
-        <label for="demoInput4" class="form-label mt-3">4. Total Working Years</label>
-        <input type="range" value="20" class="form-range" min="0" max="40" step="1" id="demoInput4"
-        oninput="this.nextElementSibling.value = this.value"> 
-        Current Selection: <output>20</output>  
-
-        <hr>
-
-        <select class="form-select" aria-label="Default select example" id="demoInput5">
-          <option selected>5. Marital Status</option>
-          <option value="Single">Single</option>
-          <option value="Maried">Maried</option>
-          <option value="Divorced">Divorced</option>
-        </select>
-
-
-        <hr>
-        <label for="demoInput6" class="form-label">6. Monthly Income</label>
-        <input type="range" value="10000" class="form-range" min="1000" max="20000" step="1000"id="demoInput6"
-        oninput="this.nextElementSibling.value = this.value"> 
-        Current Selection: <output>10000</output>  
-
       </div>
-      <!-- END Left-Hand Criteria Options -->
 
-     <!-- BEGIN Right-Hand report -->
 
-      <div class="col-md-9">
-        <div class="card m-3">
-          <div class="card-body text-center">
-            TALENT RETAINED:
-            <div class="modelResult">
-              <!-- RESULT TEXT GETS INSERTED HERE -->
+      <div class="row">
+
+        <!-- BEGIN Left-Hand Criteria Options -->
+        <div class="col-md-3">
+
+          <label for="demoInput1" class="form-label font-weight-bold">1. Training Time in Last Year</label>
+          <input type="range" value="3" class="form-range" min="0" max="6" step="1" id="demoInput1"
+            oninput="this.nextElementSibling.value = this.value">
+          Current Selection: <output>3</output>
+
+          <hr>
+
+          <label for="demoInput2" class="form-label">2. Distance From Home</label>
+          <input type="range" value="15" class="form-range" min="1" max="29" step="1" id="demoInput2"
+            oninput="this.nextElementSibling.value = this.value">
+          Current Selection: <output>15</output>
+
+          <hr>
+
+          <label for="demoInput3" class="form-label">3. Job Satisfaction</label>
+          <input type="range" value="2" class="form-range" min="1" max="4" step="1" id="demoInput3"
+            oninput="this.nextElementSibling.value = this.value">
+          Current Selection: <output>2</output>
+
+          <label for="demoInput4" class="form-label mt-3">4. Total Working Years</label>
+          <input type="range" value="20" class="form-range" min="0" max="40" step="1" id="demoInput4"
+            oninput="this.nextElementSibling.value = this.value">
+          Current Selection: <output>20</output>
+
+          <hr>
+
+          <select class="form-select" aria-label="Default select example" id="demoInput5">
+            <option selected>5. Marital Status</option>
+            <option value="Single">Single</option>
+            <option value="Maried">Maried</option>
+            <option value="Divorced">Divorced</option>
+          </select>
+
+
+          <hr>
+          <label for="demoInput6" class="form-label">6. Monthly Income</label>
+          <input type="range" value="10000" class="form-range" min="1000" max="20000" step="1000" id="demoInput6"
+            oninput="this.nextElementSibling.value = this.value">
+          Current Selection: <output>10000</output>
+
+        </div>
+        <!-- END Left-Hand Criteria Options -->
+
+        <!-- BEGIN Right-Hand report -->
+        <div class="col-md-9">
+          
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  TALENT RETAINED:
+                  <div class="modelResult">
+                    [RESULT TEXT GETS INSERTED HERE]
+                  </div>
+                  <br>
+                  REPORT:
+                </div>
+              </div>
             </div>
-
-            <br>
-            REPORT:
           </div>
-        </div>
 
-      <!-- Card Group 1 (Row of 2 charts)-->
-      <div class="card-group">
-
-        <div class="card m-3">
-          <h5 class="card-title text-center">Training Time Last Year</h5>
-          <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
-          <img class="card-img-top" src="../static/img/mock-chart.png" alt="Card image cap">
-
-        </div>
-
-        <div class="card m-3">
-          <h5 class="card-title text-center">Distance from Home</h5>
-          <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
-          <img class="card-img-top" src="../static/img/mock-chart.png" alt="Card image cap">
-        </div>
-      </div>
-  <!-- END Card Group 1 (Row of 2 charts)-->
-
-    <!-- BEGIN Card Group 2 (Row of 2 charts)-->
-        <div class="card-group">
-
-          <div class="card m-3">
-            <h5 class="card-title text-center">Job Satisfaction</h5>
-            <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
-            <img class="card-img-top" src="../static/img/mock-chart.png" alt="Card image cap">
-  
+          <div class="row mt-2">
+            <div class="col-md-6" id="demoChart1">
+            </div>
+            <div class="col-md-6" id="demoChart2">
+            </div>
           </div>
-  
-          <div class="card m-3">
-            <h5 class="card-title text-center">Total Working Years</h5>
-            <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
-            <img class="card-img-top" src="../static/img/mock-chart.png" alt="Card image cap">
+          
+          <div class="row mt-2">
+            <div class="col-md-6" id="demoChart3">
+            </div>
+            <div class="col-md-6" id="demoChart4">
+            </div>
           </div>
+          
+          <div class="row mt-2">
+            <div class="col-md-6" id="demoChart5">
+            </div>
+            <div class="col-md-6" id="demoChart6">
+            </div>
+          </div>
+
+
+
+          </div> <!-- END ROW -->
         </div>
-    <!-- END Card Group 2 (Row of 2 charts)-->
-
-    <!-- BEGIN Card Group 3 (Row of 2 charts)-->
-        <div class="card-group">
-
-          <div class="card m-3">
-            <h5 class="card-title text-center">Marital Status</h5>
-            <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
-            <img class="card-img-top" src="../static/img/mock-chart.png" alt="Card image cap">
-  
-          </div>
-  
-          <div class="card m-3">
-            <h5 class="card-title text-center">Monthly Income</h5>
-            <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
-            <img class="card-img-top" src="../static/img/mock-chart.png" alt="Card image cap">
-          </div>
-        </div>
-
-    <!-- END Card Group 3 (Row of 2 charts)-->
-
-    </div>  
-  <!-- END V2 DEMO -->
+          <!-- END V2 DEMO -->
 
 
   </main>
-  
+
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -237,7 +214,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../static/vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -254,9 +232,9 @@
   <!-- Demo Dashboard JS Files -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    
+
   <!-- test data -->
-    <script src="static/js/data.js"></script>
+  <!-- <script src="../static/js/data.js"></script> -->
 
   <script src="../static/js/app.js"></script>
 
