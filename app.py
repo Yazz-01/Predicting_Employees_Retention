@@ -9,6 +9,8 @@ from flask_cors import CORS
 import ast
 from joblib import dump, load
 
+
+
 ##engine = create_engine(f'postgresql://postgres:{password}@localhost:5432/ecobici')
 
 # reflect an existing database into a new model
@@ -35,17 +37,19 @@ def smappage():
 
 
 
-@app.route("/predict/<TrainingTimesLastYear>/<DistanceFromHome>/<JobSatisfaction>/<MaritalStatus>/<TotalWorkingYears>/<MonthlyIncome>")
-def viajesdata(TrainingTimesLastYear,DistanceFromHome,JobSatisfaction,MaritalStatus,TotalWorkingYears,MonthlyIncome):
+@app.route("/predict/<Overtime>/<MaritalStatus>/<NumCompaniesWorked>/<TotalWorkingYears>/<InSales>/<Gender>/")
+def viajesdata(Overtime,MaritalStatus,NumCompaniesWorked,TotalWorkingYears,InSales,Gender):
+    #note, InSales variable must be imported as 0 or 1
     model=load('attrition_pred.lrm')
-    scaler=load('lrm.scaler')
-    
-    data={'TrainingTimesLastYear':[TrainingTimesLastYear],
-    'DistanceFromHome':[DistanceFromHome],
-    'JobSatisfaction':[JobSatisfaction],
+    scaler=load('lrm.scaler')   
+
+
+    Fidelity = NumCompaniesWorked/TotalWorkingYears
+    data={'OverTime':[Overtime],
+    'Fidelity':[Fidelity],
+    'SalesDpt':[InSales],
     'MaritalStatus':[MaritalStatus],
-    'TotalWorkingYears':[TotalWorkingYears],
-    'MonthlyIncome':[MonthlyIncome]
+    'Gender':[Gender]
     }
     data=pd.DataFrame(data)
     data_binary_encoded = pd.get_dummies(data)
