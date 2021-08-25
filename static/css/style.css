@@ -579,6 +579,7 @@ section {
   padding: 30px 50px;
   transition: 0.5s;
   transform: scale(1.1);
+  height: 200px;
 }
 
 .benefits .box h3 {
@@ -2369,3 +2370,33 @@ section {
   color: #012970;
 }
 
+/*--------------------------------------------------------------
+# Demo Input Formatting
+--------------------------------------------------------------*/
+label {
+  font-weight: bold;
+}
+#input1 {
+
+  color: #43BCCD;
+}
+
+#input2 {
+  color: #0D31AE;
+}
+
+#input3 {
+  color: #F6C84E;
+}
+
+#input4 {
+  color: #F6461D;
+}
+
+#input5 {
+  color: #AFBAF4;
+}
+
+#input6 {
+  color: #C14C8B;
+}

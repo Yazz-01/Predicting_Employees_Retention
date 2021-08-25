@@ -104,42 +104,41 @@
         <!-- BEGIN Left-Hand Criteria Options -->
         <div class="col-md-3">
 
-          <label for="demoInput1" class="form-label font-weight-bold">1. Training Time in Last Year</label>
+          <label id="input1" for="demoInput1" class="form-label font-weight-bold">1. Training Time in Last Year</label>
           <input type="range" value="3" class="form-range" min="0" max="6" step="1" id="demoInput1"
             oninput="this.nextElementSibling.value = this.value">
           Current Selection: <output>3</output>
 
           <hr>
 
-          <label for="demoInput2" class="form-label">2. Distance From Home</label>
+          <label id="input2" for="demoInput2" class="form-label">2. Distance From Home</label>
           <input type="range" value="15" class="form-range" min="1" max="29" step="1" id="demoInput2"
             oninput="this.nextElementSibling.value = this.value">
           Current Selection: <output>15</output>
 
           <hr>
 
-          <label for="demoInput3" class="form-label">3. Job Satisfaction</label>
+          <label id="input3" for="demoInput3" class="form-label">3. Job Satisfaction</label>
           <input type="range" value="2" class="form-range" min="1" max="4" step="1" id="demoInput3"
             oninput="this.nextElementSibling.value = this.value">
           Current Selection: <output>2</output>
 
-          <label for="demoInput4" class="form-label mt-3">4. Total Working Years</label>
+          <label id="input4" for="demoInput4" class="form-label mt-3">4. Total Working Years</label>
           <input type="range" value="20" class="form-range" min="0" max="40" step="1" id="demoInput4"
             oninput="this.nextElementSibling.value = this.value">
           Current Selection: <output>20</output>
 
           <hr>
-
+          <label id="input5" for="demoInput4" class="form-label mt-3">5. Marital Status</label>
           <select class="form-select" aria-label="Default select example" id="demoInput5">
-            <option selected>5. Marital Status</option>
-            <option value="Single">Single</option>
+            <option selected="selected" value="Single">Single</option>
             <option value="Maried">Maried</option>
             <option value="Divorced">Divorced</option>
           </select>
 
 
           <hr>
-          <label for="demoInput6" class="form-label">6. Monthly Income</label>
+          <label id="input6" for="demoInput6" class="form-label">6. Monthly Income</label>
           <input type="range" value="10000" class="form-range" min="1000" max="20000" step="1000" id="demoInput6"
             oninput="this.nextElementSibling.value = this.value">
           Current Selection: <output>10000</output>
