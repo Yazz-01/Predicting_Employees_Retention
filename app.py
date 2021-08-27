@@ -28,8 +28,12 @@ def data():
     return render_template("demo.html")
 
 @app.route("/model")
-def routespage():
+def modelpage():
     return render_template("model.html")
+
+@app.route("/jupyter-notebook")
+def jupyterspage():
+    return render_template("jupyter-notebook.html")
 
 @app.route("/visualization")
 def smappage():
