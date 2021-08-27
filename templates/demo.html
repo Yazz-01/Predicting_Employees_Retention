@@ -15,7 +15,9 @@
   <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +29,7 @@
 
   <!-- Template Main CSS File -->
   <link href="../static/css/style.css" rel="stylesheet">
+
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.4.0
@@ -42,21 +45,22 @@
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <img src="../static/img/logo.png" alt="">
         <span>The Talent Retention Predicter App™</span>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="getstarted scrollto" href="#">Try the Demo</a></li>
+          <li><a class="getstarted" href="/demo">Try the Demo</a></li>
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="model.html">The Machine Learning Modelling</a></li>
-              <li><a href="visualization.html">Data Deep Dive Visualizations</a></li>
+              <li><a href="/visualization">Data Deep Dive Visualizations</a></li>
+              <li><a href="/model">The Machine Learning Modelling</a></li>
+
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="index.html#team">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/#team">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,8 +68,8 @@
     </div>
   </header><!-- End Header -->
 
-<!-- BEGIN MAIN -->
-  <main id="main"> 
+  <!-- BEGIN MAIN -->
+  <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
@@ -79,199 +83,148 @@
 
       </div>
     </section><!-- End Breadcrumbs -->
-    
+
     <div class="container mt-2">
-    <header class="section-header">
+      <header class="section-header">
 
-      <p>Enter the profile of an employee below to calculate the retention riks.
-      </p>
-    </header>
+        <p>Case Study: IBM
+        </p>
+      </header>
 
-    <!-- DEMO ADD HERE -->
+      <div class="row">
 
-      <div class="row mt-2">
-        <div class="col-md-4">
-        <aside class="filters">
-          <div class="panel panel-default">
-            <div class="panel-heading text-center">Enter employee profile</div>
-            <div class="panel-body">
-              <form>                  
-                <div class="form-group text">
-                  <ul class="list-group" id="filters">
+        <div class="col-md-6">
+          <h3>Introduction</h3>
+          <p>The demo begins with a hypothetical IBM employee named Paulette. She has worked for 2 companies during her
+            career with 10 years of total working experience. She does not receive overtime, she is single, and
+            works in the Sale Department.
+          <p>
+        </div>
 
-                    <!-- AGE FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="selAge" type="submit">
-                        <option value="" disabled selected>Employee age:</option>
-                          <option value="18" selected>18</option>
-                          <option value="19">19</option>
-                          <option value="20">20</option>
-                          <option value="21">21</option>
-                          <option value="22">22</option>
-                          <option value="23">23</option>
-                          <option value="24">24</option>
-                          <option value="25">25</option>
-                          <option value="26">26</option>
-                          <option value="27">27</option>
-                          <option value="28">28</option>
-                          <option value="29">29</option>
-                          <option value="30">30</option>
-                          <option value="31">31</option>
-                          <option value="32">32</option>
-                          <option value="33">33</option>
-                          <option value="34">34</option>
-                          <option value="35">35</option>
-                          <option value="36">36</option>
-                          <option value="37">37</option>
-                          <option value="38">38</option>
-                          <option value="39">39</option>
-                          <option value="40">40</option>
-                          <option value="41">41</option>
-                          <option value="42">42</option>
-                          <option value="43">43</option>
-                          <option value="44">44</option>
-                          <option value="45">45</option>
-                          <option value="46">46</option>
-                          <option value="47">47</option>
-                          <option value="48">48</option>
-                          <option value="49">49</option>
-                          <option value="50">50</option>
-                          <option value="51">51</option>
-                          <option value="52">52</option>
-                          <option value="53">53</option>
-                          <option value="54">54</option>
-                          <option value="55">55</option>
-                          <option value="56">56</option>
-                          <option value="57">57</option>
-                          <option value="58">58</option>
-                          <option value="59">59</option>
-                          <option value="60">60</option>
-                        </select>
-                      </div> 
-                    </li>
+        <div class="col-md-6">
+          <h3>Instructions</h3>
+          Enter new information in the criteria on the left, and the model will automatically update the retention
+          prediction and data visualization.
+          </p>
+        </div>
 
-                    <!-- GENDER FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="gender" type="submit">
-                          <option value="" disabled selected>Employee gender:</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                          <option value="">Unkown</option>
-                        </select>
-                      </div> 
-                    </li>
+      </div>
 
-                    <!-- STATE FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="state" type="submit">
-                          <option value="" disabled selected>Criteria 3</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
 
-                    <!-- COUNTRY FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <!-- <label for="country">Silter by country:</label> -->
-                        <select class="form-control" id="country" type="submit">
-                          <option value="" disabled selected>Criteria 4</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
-                    
-                    <!-- COUNTRY FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="shape" type="submit">
-                          <option value="" disabled selected>Criteria 5</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
+      <div class="row mt-5">
 
-                    <!-- COUNTRY FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="shape" type="submit">
-                          <option value="" disabled selected>Criteria 6</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
+        <!-- BEGIN Left-Hand Criteria Options -->
+        <div class="col-md-3">
 
-                    <!-- STATE FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="state" type="submit">
-                          <option value="" disabled selected>Criteria 7</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
+          <label id="input1" for="demoInput1" class="form-label">1. Number of Companies Worked For</label>
+          <input type="range" value="2" class="form-range" min="0" max="10" step="1" id="demoInput1"
+            oninput="this.nextElementSibling.value = this.value">
+          Current Selection: <output>2</output>
 
-                    <!-- COUNTRY FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <!-- <label for="country">Silter by country:</label> -->
-                        <select class="form-control" id="country" type="submit">
-                          <option value="" disabled selected>Criteria 8</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
-                    
-                    <!-- COUNTRY FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="shape" type="submit">
-                          <option value="" disabled selected>Criteria 9</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
+          <hr>
+          <label id="input2" for="demoInput2" class="form-label">2. Total Years Working</label>
+          <input type="range" value="10" class="form-range" min="0" max="40" step="1" id="demoInput2"
+            oninput="this.nextElementSibling.value = this.value">
+          Current Selection: <output>10</output>
 
-                    <!-- COUNTRY FILTER -->
-                    <li class="filter list-group-item">
-                      <div class="form-group">
-                        <select class="form-control" id="shape" type="submit">
-                          <option value="" disabled selected>Criteria 10</option>
-                          <!-- Options get inserted here by app.js -->
-                        </select>
-                      </div> 
-                    </li>
 
-                  </ul>
+          <hr>
+          <label id="input3" for="demoInput3" class="form-label mt-3">3. Receives Overtime</label>
+          <select class="form-select" aria-label="Default select example" id="demoInput3">
+            <option value="Yes">Yes</option>
+            <option selected="selected" value="No">No</option>
+          </select>
+
+          <hr>
+          <label id="input4" for="demoInput4" class="form-label mt-3">4. Marital Status</label>
+          <select class="form-select" aria-label="Default select example" id="demoInput4">
+            <option selected="selected" value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+          </select>
+
+          <hr>
+          <label id="input5" for="demoInput5" class="form-label mt-3">5. Gender</label>
+          <select class="form-select" aria-label="Default select example" id="demoInput5">
+            <option value="Male">Male</option>
+            <option selected="selected" value="Female">Female</option>
+          </select>
+
+          <hr>
+          <label id="input6" for="demoInput6" class="form-label mt-3">6. Sales Department</label>
+          <select class="form-select" aria-label="Default select example" id="demoInput6">
+            <!-- NOTE 1 means yes in sales -->
+            <option selected="selected" value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+
+        </div>
+        <!-- END Left-Hand Criteria Options -->
+
+        <!-- BEGIN Right-Hand report -->
+        <div class="col-md-9">
+
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <div class="modelResult">
+                    <div class="card text-center">
+                      <div class="card-body resultCardColor">
+                        <h3 class="card-title">Machine Learning Model Results:</h3>
+                        <p class="card-text resultCardText"></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <!-- RESET BUTTON BUTTON -->
-                <!-- <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button> -->
-                <div class="text-center">
-                  <button id="reset-btn" type="button" class="btn btn-default text-center">Reset the Filter</button>
-                </div>
-              </form>
+
             </div>
           </div>
-        </aside>
-      </div>
 
-
-      <div class="col-md-8">
-        <div class="panel panel-default">
-          <div class="panel-heading text-center">Results</div>
-          <div class="panel-body">
-        <p>Results go here</p>
-        
-        
+          <div class="row text-center mt-2">
+            <div class="col-md-12">
+              <h3>Visualization</h3>
+            </div>
           </div>
-      </div>
-    </div>
 
-  </main><!-- End #main -->
+          <div class="row">
+            <div class="col-xl-6 col-lg-12 mt-2" id="demoChart1">
+            </div>
+            <div class="col-xl-6 col-lg-12 mt-2" id="demoChart2">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-6 col-lg-12 mt-2" id="demoChart3">
+            </div>
+            <div class="col-xl-6 col-lg-12 mt-2" id="demoChart4">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-6 col-lg-12 mt-2" id="demoChart5">
+            </div>
+            <div class="col-xl-6 col-lg-12 mt-2" id="demoChart6">
+            </div>
+          </div>
+
+
+
+        </div> <!-- END ROW -->
+      </div>
+
+      <div class="row mt-5">
+      </div>
+      <!-- END V2 DEMO -->
+
+    </div> <!-- END Container-->
+  </main>
+
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -290,7 +243,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../static/vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -303,6 +257,16 @@
 
   <!-- Template Main JS File -->
   <script src="../static/js/main.js"></script>
+
+  <!-- Demo Dashboard JS Files -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- test data -->
+  <!-- <script src="../static/js/data.js"></script> -->
+
+  <script src="../static/js/app.js"></script>
+
 
 </body>
 

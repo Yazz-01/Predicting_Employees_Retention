@@ -42,21 +42,22 @@
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <img src="../static/img/logo.png" alt="">
         <span>The Talent Retention Predicter App™</span>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="getstarted scrollto" href="#">Try the Demo</a></li>
+          <li><a class="getstarted" href="/demo">Try the Demo</a></li>
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="model.html">The Machine Learning Modelling</a></li>
-              <li><a href="visualization.html">Data Deep Dive Visualizations</a></li>
+              <li><a href="/visualization">Data Deep Dive Visualizations</a></li>             
+              <li><a href="/model">The Machine Learning Modelling</a></li>
+
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="index.html#team">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/#team">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -72,7 +73,7 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li>Machine Learning Modelling</li>
         </ol>
         <h2>Machine Learning Modelling</h2>
@@ -159,9 +160,21 @@
       <p>The IBM Case Study</p>
     </header>
 
+    <!-- JUPYTER NOTEBOOK -->
     <div class="row mt-2">
       <div class="col-md-12 text-center">
-        <h2>[Jupyter or Google Colab notebook embedded here]</h2>
+        <h2>Example Code in Jupyter Notebook</h2>
+
+        <!-- INSERT JUPYTER NOTEBOOK AS IFRAME BELOW -->
+        <iframe width="100%" height="1000" src="jupyter-notebook">
+        </iframe>
+
+
+
+
+
+
+        <!-- END JUPYTER NOTEBOOK -->
       </div>
     </div> 
 
