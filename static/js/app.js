@@ -14,10 +14,21 @@ function runEnter() {
     var demoInput4 = d3.select("#demoInput4").property("value");
     var demoInput5 = d3.select("#demoInput5").property("value");
     var demoInput6 = d3.select("#demoInput6").property("value");
-
+    
+    var resultCard = d3.select(".resultCard")
+    
     d3.json("/predict/" + demoInput3 + "/" + demoInput4 + "/" + demoInput1 + "/" + demoInput2 + "/" + demoInput6 + "/" + demoInput5).then(result => {
         console.log(result)
+        if (result = 0) {
+            resultCard.id = "greenResult";
+            resultCard.append("span").text("The Person Will Stay");
+          } 
+        else {
+            resultCard.id = "redResult";
+        }
+
     });
+
 
     d3.csv('../static/js/data.csv').then(ibmData => {
         var overTime = [];
@@ -340,7 +351,7 @@ function runEnter() {
                     yref: 'paper',
                     x: demoInput5,
                     y: .8,
-                    text: 'Gender',
+                    text: 'Employee Profile',
                     showarrow: true,
                     arrowhead: 7,
                 }

@@ -118,14 +118,14 @@
 
 
           <hr>
-          <label id="input3" for="demoInput3" class="form-label mt-3">2. Receives Overtime</label>
+          <label id="input3" for="demoInput3" class="form-label mt-3">3. Receives Overtime</label>
           <select class="form-select" aria-label="Default select example" id="demoInput3">
             <option selected="selected" value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
 
           <hr>
-          <label id="input4" for="demoInput4" class="form-label mt-3">3. Marital Status</label>
+          <label id="input4" for="demoInput4" class="form-label mt-3">4. Marital Status</label>
           <select class="form-select" aria-label="Default select example" id="demoInput4">
             <option selected="selected" value="Single">Single</option>
             <option value="Married">Married</option>
@@ -133,17 +133,18 @@
           </select>
 
           <hr>
-          <label id="input5" for="demoInput5" class="form-label mt-3">4. Gender</label>
+          <label id="input5" for="demoInput5" class="form-label mt-3">5. Gender</label>
           <select class="form-select" aria-label="Default select example" id="demoInput5">
             <option selected="selected" value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
 
           <hr>
-          <label id="input6" for="demoInput6" class="form-label mt-3">5. Sales Department</label>
+          <label id="input6" for="demoInput6" class="form-label mt-3">6. Sales Department</label>
           <select class="form-select" aria-label="Default select example" id="demoInput6">
-            <option selected="selected" value="0">Yes</option>
-            <option value="1">No</option>
+            <!-- NOTE 1 means yes in sales -->
+            <option selected="selected" value="1">Yes</option>
+            <option value="0">No</option>
           </select>
 
 
@@ -160,7 +161,7 @@
                   TALENT RETAINED:
                   <div class="modelResult">
                     <div class="card text-center">
-                      <div class="card-body" id="redResult">
+                      <div class="card-body resultCard" id="">
                         <h5 class="card-title">[RESULT TEXT GETS INSERTED HERE]</h5>
                         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                       </div>
@@ -171,7 +172,7 @@
             </div>
           </div>
 
-          <div class="row text-center">
+          <div class="row text-center mt-2">
             <div class="col-md-12">     
               <h3>Report:</h3>
             </div>
