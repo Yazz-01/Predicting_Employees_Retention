@@ -2378,11 +2378,15 @@ label {
 }
 #input1 {
 
-  color: #43BCCD;
+  color: #0D31AE;
+}
+#input1-1, #input1-2 {
+  color: #0D31AE;
+  font-weight: normal;
 }
 
 #input2 {
-  color: #0D31AE;
+  color: #C14C8B;
 }
 
 #input3 {
@@ -2394,9 +2398,13 @@ label {
 }
 
 #input5 {
-  color: #AFBAF4;
+  color: #43BCCD;
 }
 
-#input6 {
-  color: #C14C8B;
+
+#greenResult {
+  background-color: #7FC4B4;
 }
+
+#redResult {
+  background-color: #E24862;

@@ -6,38 +6,105 @@ d3.selectAll("select").on("change", runEnter);
 plotWidth = 400
 plotHeight = 250
 
-function runEnter(demoImput1) {
+function runEnter() {
 
-    var demoImput1 = d3.select("#demoInput1").property("value");
-    var demoImput2 = d3.select("#demoInput2").property("value");
-    var demoImput3 = d3.select("#demoInput3").property("value");
-    var demoImput4 = d3.select("#demoInput4").property("value");
-    var demoImput5 = d3.select("#demoInput5").property("value");
-    var demoImput6 = d3.select("#demoInput6").property("value");
+    var demoInput1_1 = d3.select("#demoInput1-1").property("value");
+    var demoInput1_2 = d3.select("#demoInput1-2").property("value");
+    var demoInput2 = d3.select("#demoInput2").property("value");
+    var demoInput3 = d3.select("#demoInput3").property("value");
+    var demoInput4 = d3.select("#demoInput4").property("value");
+    var demoInput5 = d3.select("#demoInput5").property("value");
+
+    d3.json("/predict/" + demoInput2 + "/" + demoInput3 + "/" + demoInput1_1 + "/" + demoInput1_2 + "/" + demoInput5 + "/" + demoInput4).then(result => {
+        console.log(result)
+    });
 
     d3.csv('../static/js/data.csv').then(ibmData => {
-        var trainTime = [];
-        var distHome = [];
-        var jobSat = [];
-        var workYears = [];
+        var overTime = [];
         var marStatus = []
-        var monInc = []
+        var gender = []
+        var sales = [];
+        var fidelity = [];
+
+
 
         ibmData.forEach(d => {
-            trainTime.push(+d.TrainingTimesLastYear);
-            distHome.push(+d.DistanceFromHome);
-            jobSat.push(+d.JobSatisfaction);
-            workYears.push(+d.TotalWorkingYears);
+            overTime.push(d.OverTime);
             marStatus.push(d.MaritalStatus);
-            monInc.push(+d.MonthlyIncome);
-
+            gender.push(d.Gender);
+            sales.push(d.SalesDpt);
+            fidelity.push(+d.Fidelity);
         });
 
-
-        // 1. TRAINING  PLOT
-        var data = [{
-            x: trainTime,
+        // 1. Fidelity
+        var fidelityInd = demoInput1_1 / demoInput1_2
+        var trace = {
+            x: fidelity,
             type: 'box',
+            marker: { color: '#C14C8B' },
+            boxmean: 'sd'
+        };
+        var data = [trace];
+
+        var layout = {
+            title: {
+                text: "Fidelity",
+                font: {
+                    color: '#C14C8B'
+                },
+            },
+            width: 830,
+            height: 400,
+            margin: {
+                l: 0,
+                r: 5,
+                b: 40,
+                t: 80,
+                pad: 0
+            },
+            paper_bgcolor: '#eee',
+            plot_bgcolor: '#eee',
+            bargap: 0.2,
+            xaxis: {
+                title: 'Fidelity',
+            },
+            annotations: [
+                {
+                    font: {
+                        color: '#404040'
+                    },
+                    yref: 'paper',
+                    x: fidelityInd,
+                    y: .8,
+                    text: 'Employee Profile',
+                    showarrow: true,
+                    arrowhead: 7,
+                }
+            ],
+            shapes: [
+                {
+                    type: 'line',
+                    yref: 'paper',
+                    x0: fidelityInd,
+                    y0: 0,
+                    x1: fidelityInd,
+                    y1: 1,
+                    line: {
+                        color: '#404040',
+                        width: 3
+                    }
+                }],
+
+
+        };
+        var config = { responsive: true }
+
+        Plotly.newPlot('demoChart1', data, layout, config);
+
+        // 2. OVERTIME  PLOT
+        var data = [{
+            x: overTime,
+            type: 'histogram',
             marker: { color: '#43BCCD' },
             boxmean: 'sd',
             showticklabels: false
@@ -47,72 +114,10 @@ function runEnter(demoImput1) {
 
         var layout = {
             title: {
-                text: "Training Courses",
+                text: "Receives Overtime Pay",
                 font: {
-            color: '#43BCCD'
+                    color: '#43BCCD'
                 }
-        },
-            width: plotWidth,
-            height: plotHeight,
-            margin: {
-                l: 0,
-                r: 5,
-                b: 40,
-                t: 80,
-                pad: 0
-            },
-            paper_bgcolor: '#eee',
-            plot_bgcolor: '#eee',
-            bargap: 0.2,
-            xaxis: {
-                title: 'Courses Taken',
-            },
-
-            annotations: [
-                {
-                    font: {
-                        color: '#404040'
-                    },
-                    yref: 'paper',
-                    x: demoImput1,
-                    y: .8,
-                    text: 'Employee Profile',
-                    showarrow: true,
-                    arrowhead: 7,
-                }
-            ],
-            shapes: [
-                {
-                    type: 'line',
-                    yref: 'paper',
-                    x0: demoImput1,
-                    y0: 0,
-                    x1: demoImput1,
-                    y1: 1,
-                    line: {
-                        color: '#404040',
-                        width: 3
-                    }
-                }],
-        };
-        var config = { responsive: true }
-
-        Plotly.newPlot('demoChart1', data, layout, config);
-
-        // 2. TRAINING TIME PLOT
-        var trace = {
-            x: distHome,
-            type: 'box',
-            marker: { color: '#0D31AE' },
-            boxmean: 'sd'
-        };
-        var data = [trace];
-
-        var layout = {
-            title: {text: "Distance from Home",
-            font: {
-            color: '#0D31AE',
-            weight: 'bold'},
             },
             width: plotWidth,
             height: plotHeight,
@@ -126,30 +131,30 @@ function runEnter(demoImput1) {
             paper_bgcolor: '#eee',
             plot_bgcolor: '#eee',
             bargap: 0.2,
-            xaxis: {
-                title: 'Distance',
-                           },
+            // xaxis: {
+            //     title: 'Receives Overtime Pay',
+            // },
+
             annotations: [
                 {
                     font: {
                         color: '#404040'
                     },
                     yref: 'paper',
-                    x: demoImput2,
+                    x: demoInput2,
                     y: .8,
                     text: 'Employee Profile',
                     showarrow: true,
                     arrowhead: 7,
                 }
             ],
-
             shapes: [
                 {
                     type: 'line',
                     yref: 'paper',
-                    x0: demoImput2,
+                    x0: demoInput2,
                     y0: 0,
-                    x1: demoImput2,
+                    x1: demoInput2,
                     y1: 1,
                     line: {
                         color: '#404040',
@@ -161,21 +166,22 @@ function runEnter(demoImput1) {
 
         Plotly.newPlot('demoChart2', data, layout, config);
 
-        // 3. JOB SATISFACTION PLOT
+        // 3. Marital Status
         var trace = {
-            x: jobSat,
-            type: 'box',
-            marker: { color: '#F6C84E' },
+            x: marStatus,
+            type: 'histogram',
+            marker: { color: '#AFBAF4' },
             boxmean: 'sd'
         };
         var data = [trace];
 
         var layout = {
             title: {
-                text: "Job Satisfaction",
+                text: "Marital Status",
                 font: {
-            color: '#F6C84E'},
+                    color: '#AFBAF4'
                 },
+            },
             width: plotWidth,
             height: plotHeight,
             margin: {
@@ -188,16 +194,16 @@ function runEnter(demoImput1) {
             paper_bgcolor: '#eee',
             plot_bgcolor: '#eee',
             bargap: 0.2,
-            xaxis: {
-                title: 'Satisfaction Rating',
-            },
+            // xaxis: {
+            //     title: 'Status',
+            // },
             annotations: [
                 {
                     font: {
                         color: '#404040'
                     },
                     yref: 'paper',
-                    x: demoImput3,
+                    x: demoInput3,
                     y: .8,
                     text: 'Employee Profile',
                     showarrow: true,
@@ -208,35 +214,40 @@ function runEnter(demoImput1) {
                 {
                     type: 'line',
                     yref: 'paper',
-                    x0: demoImput3,
+                    x0: demoInput3,
                     y0: 0,
-                    x1: demoImput3,
+                    x1: demoInput3,
                     y1: 1,
                     line: {
                         color: '#404040',
                         width: 3
                     }
                 }],
+
+
         };
         var config = { responsive: true }
 
         Plotly.newPlot('demoChart3', data, layout, config);
 
-        // 4. TOTAL WORKING TIME PLOT
+
+        // 4. Gender
         var trace = {
-            x: workYears,
-            type: 'box',
-            marker: { color: '#F6461D' },
+            x: gender,
+            type: 'histogram',
+            marker: { color: '#0D31AE' },
             boxmean: 'sd'
         };
         var data = [trace];
 
         var layout = {
             title: {
-                text: "Total Years Working",
+                text: "Gender",
                 font: {
-            color: '#F6461D'},
+                    color: '#0D31AE',
+                    weight: 'bold'
                 },
+            },
             width: plotWidth,
             height: plotHeight,
             margin: {
@@ -249,29 +260,30 @@ function runEnter(demoImput1) {
             paper_bgcolor: '#eee',
             plot_bgcolor: '#eee',
             bargap: 0.2,
-            xaxis: {
-                title: 'Years',
-            },
+            // xaxis: {
+            //     title: 'Gender',
+            //                },
             annotations: [
                 {
                     font: {
                         color: '#404040'
                     },
                     yref: 'paper',
-                    x: demoImput4,
+                    x: demoInput4,
                     y: .8,
-                    text: 'Employee Profile',
+                    text: 'Gender',
                     showarrow: true,
                     arrowhead: 7,
                 }
             ],
+
             shapes: [
                 {
                     type: 'line',
                     yref: 'paper',
-                    x0: demoImput4,
+                    x0: demoInput4,
                     y0: 0,
-                    x1: demoImput4,
+                    x1: demoInput4,
                     y1: 1,
                     line: {
                         color: '#404040',
@@ -283,83 +295,23 @@ function runEnter(demoImput1) {
 
         Plotly.newPlot('demoChart4', data, layout, config);
 
-        // 5. Marital Status
+
+        // 5. SALES
         var trace = {
-            x: marStatus,
-            type: 'box',
-            marker: { color: '#AFBAF4' },
-            boxmean: 'sd'
-        };
-        var data = [trace];
-
-        var layout = {
-            title: {text: "Marital Status",
-            font: {
-            color: '#AFBAF4'},
-            },
-            width: plotWidth,
-            height: plotHeight,
-            margin: {
-                l: 0,
-                r: 5,
-                b: 40,
-                t: 80,
-                pad: 0
-            },
-            paper_bgcolor: '#eee',
-            plot_bgcolor: '#eee',
-            bargap: 0.2,
-            xaxis: {
-                title: 'Status',
-            },
-            annotations: [
-                {
-                    font: {
-                        color: '#404040'
-                    },
-                    yref: 'paper',
-                    x: demoImput5,
-                    y: .8,
-                    text: 'Employee Profile',
-                    showarrow: true,
-                    arrowhead: 7,
-                }
-            ],
-            shapes: [
-                {
-                    type: 'line',
-                    yref: 'paper',
-                    x0: demoImput5,
-                    y0: 0,
-                    x1: demoImput5,
-                    y1: 1,
-                    line: {
-                        color: '#404040',
-                        width: 3
-                    }
-                }],
-
-
-        };
-        var config = { responsive: true }
-
-        Plotly.newPlot('demoChart5', data, layout, config);
-
-        // 6. MONTHLY INCOME PLOT
-        var trace = {
-            x: monInc,
-            type: 'box',
-            marker: { color: '#C14C8B' },
+            x: sales,
+            type: 'histogram',
+            marker: { color: '#F6461D' },
             boxmean: 'sd'
         };
         var data = [trace];
 
         var layout = {
             title: {
-                text: "Monthly Income",
+                text: "Works in Sales Department",
                 font: {
-            color: '#C14C8B'},
+                    color: '#F6461D'
                 },
+            },
             width: plotWidth,
             height: plotHeight,
             margin: {
@@ -372,16 +324,16 @@ function runEnter(demoImput1) {
             paper_bgcolor: '#eee',
             plot_bgcolor: '#eee',
             bargap: 0.2,
-            xaxis: {
-                title: 'Income',
-            },
+            // xaxis: {
+            //     title: 'Years',
+            // },
             annotations: [
                 {
                     font: {
                         color: '#404040'
                     },
                     yref: 'paper',
-                    x: demoImput6,
+                    x: demoInput5,
                     y: .8,
                     text: 'Employee Profile',
                     showarrow: true,
@@ -392,21 +344,20 @@ function runEnter(demoImput1) {
                 {
                     type: 'line',
                     yref: 'paper',
-                    x0: demoImput6,
+                    x0: demoInput5,
                     y0: 0,
-                    x1: demoImput6,
+                    x1: demoInput5,
                     y1: 1,
                     line: {
                         color: '#404040',
                         width: 3
                     }
                 }],
-
-
         };
         var config = { responsive: true }
 
-        Plotly.newPlot('demoChart6', data, layout, config);
+        Plotly.newPlot('demoChart5', data, layout, config);
+
     });
 };
 
