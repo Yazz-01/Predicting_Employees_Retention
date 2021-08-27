@@ -15,16 +15,22 @@ function runEnter() {
     var demoInput5 = d3.select("#demoInput5").property("value");
     var demoInput6 = d3.select("#demoInput6").property("value");
     
-    var resultCard = d3.select(".resultCard")
+    var resultCardColor = d3.select(".resultCardColor")
+    var resultCardText = d3.select(".resultCardText")
+
+
     
     d3.json("/predict/" + demoInput3 + "/" + demoInput4 + "/" + demoInput1 + "/" + demoInput2 + "/" + demoInput6 + "/" + demoInput5).then(result => {
-        console.log(result)
-        if (result = 0) {
-            resultCard.id = "greenResult";
-            resultCard.append("span").text("The Person Will Stay");
+
+        if (result == '0') {
+            console.log("The Person Will Probably Stay")
+            resultCardColor.attr("id", "greenResult");
+            resultCardText.text("The Person Will Probably Stay");
           } 
         else {
-            resultCard.id = "redResult";
+            console.log("The Person Will Probably Leave")
+            resultCardColor.attr("id", "redResult");
+            resultCardText.text("The Person Will Probably Leave");
         }
 
     });
