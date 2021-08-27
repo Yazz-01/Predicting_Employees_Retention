@@ -2378,11 +2378,7 @@ label {
 }
 #input1 {
 
-  color: #0D31AE;
-}
-#input1-1, #input1-2 {
-  color: #0D31AE;
-  font-weight: normal;
+  color: #43BCCD;
 }
 
 #input2 {
@@ -2394,17 +2390,22 @@ label {
 }
 
 #input4 {
-  color: #F6461D;
+  color: #0D31AE;
 }
 
 #input5 {
-  color: #43BCCD;
+  color: #E24862;
 }
 
+#input6 {
+  color: #AFBAF4;
+}
 
+/* MODEL RESULTS */
 #greenResult {
   background-color: #7FC4B4;
 }
 
 #redResult {
   background-color: #E24862;
+}
