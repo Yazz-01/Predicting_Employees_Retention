@@ -420,7 +420,7 @@ function runEnter() {
                         color: '#404040'
                     },
                     yref: 'paper',
-                    x: demoInput6,
+                    x: Math.abs(demoInput6-1),
                     y: .8,
                     text: 'Employee Profile',
                     showarrow: true,
@@ -431,9 +431,9 @@ function runEnter() {
                 {
                     type: 'line',
                     yref: 'paper',
-                    x0: demoInput6,
+                    x0: Math.abs(demoInput6-1),
                     y0: 0,
-                    x1: demoInput6,
+                    x1: Math.abs(demoInput6-1),
                     y1: 1,
                     line: {
                         color: '#404040',
