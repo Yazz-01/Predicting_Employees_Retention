@@ -53,12 +53,7 @@ def viajesdata(Overtime,MaritalStatus,NumCompaniesWorked,TotalWorkingYears,InSal
     print("Model and scaler Loading done")
 
     Fidelity = NumCompaniesWorked/TotalWorkingYears
-    # data={'OverTime':[Overtime],
-    # 'Fidelity':[Fidelity],
-    # 'SalesDpt':[InSales],
-    # 'MaritalStatus':[MaritalStatus],
-    # 'Gender':[Gender]
-    # }
+
     male=0
     female=0
     OTyes=0
