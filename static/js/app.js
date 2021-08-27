@@ -121,6 +121,7 @@ function runEnter() {
         Plotly.newPlot('demoChart1', data, layout, config);
 
 
+        
        // 2. TOTAL YEARS WORKED
        var trace = {
         x: totYearsWorked,

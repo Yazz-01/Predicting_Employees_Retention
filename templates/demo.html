@@ -96,7 +96,7 @@
         <div class="col-md-6">
           <h3>Introduction</h3>
           <p>The demo begins with a hypothetical IBM employee named Paulette. She has worked for 2 companies during her
-            career with 10 years of total working experience. She does not receive overtime, she is single, and
+            career with 3 years of total working experience. She receives overtime, is single, and
             works in the Sale Department.
           <p>
         </div>
@@ -104,7 +104,9 @@
         <div class="col-md-6">
           <h3>Instructions</h3>
           Enter new information in the criteria on the left, and the model will automatically update the retention
-          prediction and data visualization.
+          prediction and data visualization. 
+          
+          See what changes in employee profile would make this person more likely to be retained. Try to discover which which factors make less of a difference.
           </p>
         </div>
 
@@ -123,16 +125,16 @@
 
           <hr>
           <label id="input2" for="demoInput2" class="form-label">2. Total Years Working</label>
-          <input type="range" value="10" class="form-range" min="0" max="40" step="1" id="demoInput2"
+          <input type="range" value="3" class="form-range" min="0" max="40" step="1" id="demoInput2"
             oninput="this.nextElementSibling.value = this.value">
-          Current Selection: <output>10</output>
+          Current Selection: <output>3</output>
 
 
           <hr>
           <label id="input3" for="demoInput3" class="form-label mt-3">3. Receives Overtime</label>
           <select class="form-select" aria-label="Default select example" id="demoInput3">
-            <option value="Yes">Yes</option>
-            <option selected="selected" value="No">No</option>
+            <option selected="selected" value="Yes">Yes</option>
+            <option  value="No">No</option>
           </select>
 
           <hr>
