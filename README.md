@@ -16,7 +16,7 @@
 Create a Machine Learning Model to predict the retention of employees using a data set from IBM. 
 
 ## How to run the app
-2 options:
+Click on the following link to check the app,Data Analysis in Tableau and the Machine Learning and Deep Learnig models :
 1. [Fully deployed online version](https://predicting-attrition.herokuapp.com/)
 2. Run locally:
      1. Clone this repository
