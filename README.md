@@ -17,7 +17,9 @@ Create a Machine Learning Model to predict the retention of employees using a da
 
 ## How to run the app
 Click on the following link to check the app,Data Analysis in Tableau and the Machine Learning and Deep Learnig models :
-1. [Fully deployed online version](https://predicting-attrition.herokuapp.com/)
+
+1. [Fully deployed online version CLICK HERE!!](https://predicting-attrition.herokuapp.com/) to go directly to the app online.
+
 2. Run locally:
      1. Clone this repository
      2. In the main repository folder, run "python3 app.py" in your terminal
