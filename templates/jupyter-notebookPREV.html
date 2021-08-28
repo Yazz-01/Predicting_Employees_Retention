@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FinalLogRegModel</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>LogRegModel-Marcelo-Copy1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -843,8 +843,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 | The full license is in the file LICENSE, distributed with this software.
 |----------------------------------------------------------------------------*/
 
-/*! @charset "UTF-8"; */
-
+/* @charset "UTF-8"; */
 /*!
 
 Copyright 2015-present Palantir Technologies, Inc. All rights reserved.
@@ -14270,10 +14269,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -14301,7 +14301,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../WA_Fn-UseC_-HR-Employee-Attrition.csv&quot;</span><span class="p">)</span>
@@ -14323,7 +14323,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
@@ -14654,7 +14654,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">monthlyIncomeBins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2000</span><span class="p">,</span><span class="mi">4000</span><span class="p">,</span><span class="mi">6000</span><span class="p">,</span><span class="mi">8000</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">]</span>
@@ -14706,7 +14706,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14742,7 +14742,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
@@ -14798,7 +14798,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corrLimit</span> <span class="o">=</span> <span class="o">.</span><span class="mi">6</span>
@@ -14835,7 +14835,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
 
 
 
@@ -14867,7 +14867,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dropped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Attrition&quot;</span><span class="p">])</span>
@@ -14890,7 +14890,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 
 
 
@@ -14914,7 +14914,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">createModel</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -15864,7 +15864,7 @@ weighted avg       0.82      0.83      0.83      1470
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">finalFeatures</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;OverTime&#39;</span><span class="p">,</span> <span class="s1">&#39;Fidelity&#39;</span><span class="p">,</span> <span class="s1">&#39;MaritalStatus&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;SalesDpt&#39;</span><span class="p">]</span>
@@ -15884,17 +15884,7 @@ weighted avg       0.82      0.83      0.83      1470
     <span class="s1">&#39;solver&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;liblinear&#39;</span><span class="p">]}</span>
 <span class="p">]</span>
 <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">LogisticRegression</span><span class="p">(),</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="c1">#grid.fit(X_train_scaled, y_train)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1m ONLY PRINTING FINAL OUTPUT TO SAVE SPACE </span><span class="se">\033</span><span class="s2">[0;0m&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;GridSearchCV(estimator=LogisticRegression(), </span><span class="se">\</span>
-<span class="s2">             param_grid=[{&#39;C&#39;: array([1.00000000e-04, 2.63665090e-04, 6.95192796e-04, 1.83298071e-03, </span><span class="se">\</span>
-<span class="s2">       4.83293024e-03, 1.27427499e-02, 3.35981829e-02, 8.85866790e-02, </span><span class="se">\</span>
-<span class="s2">       2.33572147e-01, 6.15848211e-01, 1.62377674e+00, 4.28133240e+00, </span><span class="se">\</span>
-<span class="s2">       1.12883789e+01, 2.97635144e+01, 7.84759970e+01, 2.06913808e+02, </span><span class="se">\</span>
-<span class="s2">       5.45559478e+02, 1.43844989e+03, 3.79269019e+03, 1.00000000e+04]), </span><span class="se">\</span>
-<span class="s2">                          &#39;penalty&#39;: [&#39;l1&#39;, &#39;l2&#39;], &#39;solver&#39;: [&#39;liblinear&#39;]}], </span><span class="se">\</span>
-<span class="s2">             verbose=3)&quot;</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15914,11 +15904,230 @@ weighted avg       0.82      0.83      0.83      1470
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-bold"> ONLY PRINTING FINAL OUTPUT TO SAVE SPACE </span>
- 
-GridSearchCV(estimator=LogisticRegression(),              param_grid=[{&#39;C&#39;: array([1.00000000e-04, 2.63665090e-04, 6.95192796e-04, 1.83298071e-03,        4.83293024e-03, 1.27427499e-02, 3.35981829e-02, 8.85866790e-02,        2.33572147e-01, 6.15848211e-01, 1.62377674e+00, 4.28133240e+00,        1.12883789e+01, 2.97635144e+01, 7.84759970e+01, 2.06913808e+02,        5.45559478e+02, 1.43844989e+03, 3.79269019e+03, 1.00000000e+04]),                           &#39;penalty&#39;: [&#39;l1&#39;, &#39;l2&#39;], &#39;solver&#39;: [&#39;liblinear&#39;]}],              verbose=3)
+<pre>Fitting 5 folds for each of 40 candidates, totalling 200 fits
+[CV 1/5] END C=0.0001, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.0001, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.0001, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.0001, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.0001, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.0001, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.0001, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.0001, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.0001, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.0001, penalty=l2, solver=liblinear;, score=0.845 total time=   0.3s
+[CV 1/5] END C=0.00026366508987303583, penalty=l1, solver=liblinear;, score=0.846 total time=   1.8s
+[CV 2/5] END C=0.00026366508987303583, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.00026366508987303583, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.00026366508987303583, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.00026366508987303583, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.00026366508987303583, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.00026366508987303583, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.00026366508987303583, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.00026366508987303583, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.00026366508987303583, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.0006951927961775605, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.0006951927961775605, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.0006951927961775605, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.0006951927961775605, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.0006951927961775605, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.0006951927961775605, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.0006951927961775605, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.0006951927961775605, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.0006951927961775605, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.0006951927961775605, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.0018329807108324356, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.0018329807108324356, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.0018329807108324356, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.0018329807108324356, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.0018329807108324356, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.0018329807108324356, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.0018329807108324356, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.0018329807108324356, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.0018329807108324356, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.0018329807108324356, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.004832930238571752, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.004832930238571752, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.004832930238571752, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.004832930238571752, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.004832930238571752, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.004832930238571752, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.004832930238571752, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.004832930238571752, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.004832930238571752, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.004832930238571752, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.012742749857031334, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.012742749857031334, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.012742749857031334, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.012742749857031334, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.012742749857031334, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.012742749857031334, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.012742749857031334, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.012742749857031334, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.012742749857031334, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.012742749857031334, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.03359818286283781, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.03359818286283781, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.03359818286283781, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.03359818286283781, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.03359818286283781, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.03359818286283781, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.03359818286283781, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.03359818286283781, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.03359818286283781, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.03359818286283781, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.08858667904100823, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.08858667904100823, penalty=l1, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.08858667904100823, penalty=l1, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 4/5] END C=0.08858667904100823, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.08858667904100823, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 1/5] END C=0.08858667904100823, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 2/5] END C=0.08858667904100823, penalty=l2, solver=liblinear;, score=0.846 total time=   0.0s
+[CV 3/5] END C=0.08858667904100823, penalty=l2, solver=liblinear;, score=0.864 total time=   0.0s
+[CV 4/5] END C=0.08858667904100823, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.08858667904100823, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=0.23357214690901212, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=0.23357214690901212, penalty=l1, solver=liblinear;, score=0.851 total time=   0.0s
+[CV 3/5] END C=0.23357214690901212, penalty=l1, solver=liblinear;, score=0.864 total time=   0.0s
+[CV 4/5] END C=0.23357214690901212, penalty=l1, solver=liblinear;, score=0.836 total time=   0.0s
+[CV 5/5] END C=0.23357214690901212, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=0.23357214690901212, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 2/5] END C=0.23357214690901212, penalty=l2, solver=liblinear;, score=0.864 total time=   0.0s
+[CV 3/5] END C=0.23357214690901212, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=0.23357214690901212, penalty=l2, solver=liblinear;, score=0.850 total time=   0.0s
+[CV 5/5] END C=0.23357214690901212, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=0.615848211066026, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=0.615848211066026, penalty=l1, solver=liblinear;, score=0.869 total time=   0.0s
+[CV 3/5] END C=0.615848211066026, penalty=l1, solver=liblinear;, score=0.864 total time=   0.0s
+[CV 4/5] END C=0.615848211066026, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=0.615848211066026, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=0.615848211066026, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 2/5] END C=0.615848211066026, penalty=l2, solver=liblinear;, score=0.878 total time=   0.0s
+[CV 3/5] END C=0.615848211066026, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=0.615848211066026, penalty=l2, solver=liblinear;, score=0.841 total time=   0.0s
+[CV 5/5] END C=0.615848211066026, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=1.623776739188721, penalty=l1, solver=liblinear;, score=0.864 total time=   0.0s
+[CV 2/5] END C=1.623776739188721, penalty=l1, solver=liblinear;, score=0.869 total time=   0.0s
+[CV 3/5] END C=1.623776739188721, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=1.623776739188721, penalty=l1, solver=liblinear;, score=0.841 total time=   0.0s
+[CV 5/5] END C=1.623776739188721, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=1.623776739188721, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=1.623776739188721, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=1.623776739188721, penalty=l2, solver=liblinear;, score=0.864 total time=   0.0s
+[CV 4/5] END C=1.623776739188721, penalty=l2, solver=liblinear;, score=0.836 total time=   0.0s
+[CV 5/5] END C=1.623776739188721, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=4.281332398719396, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=4.281332398719396, penalty=l1, solver=liblinear;, score=0.869 total time=   0.0s
+[CV 3/5] END C=4.281332398719396, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=4.281332398719396, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=4.281332398719396, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=4.281332398719396, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=4.281332398719396, penalty=l2, solver=liblinear;, score=0.878 total time=   0.0s
+[CV 3/5] END C=4.281332398719396, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=4.281332398719396, penalty=l2, solver=liblinear;, score=0.841 total time=   0.0s
+[CV 5/5] END C=4.281332398719396, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=11.288378916846883, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=11.288378916846883, penalty=l1, solver=liblinear;, score=0.873 total time=   0.0s
+[CV 3/5] END C=11.288378916846883, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=11.288378916846883, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=11.288378916846883, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=11.288378916846883, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=11.288378916846883, penalty=l2, solver=liblinear;, score=0.878 total time=   0.0s
+[CV 3/5] END C=11.288378916846883, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=11.288378916846883, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=11.288378916846883, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=29.763514416313132, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=29.763514416313132, penalty=l1, solver=liblinear;, score=0.873 total time=   0.0s
+[CV 3/5] END C=29.763514416313132, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=29.763514416313132, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=29.763514416313132, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=29.763514416313132, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=29.763514416313132, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=29.763514416313132, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=29.763514416313132, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=29.763514416313132, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=78.47599703514607, penalty=l1, solver=liblinear;, score=0.860 total time=   0.1s
+[CV 2/5] END C=78.47599703514607, penalty=l1, solver=liblinear;, score=0.882 total time=   0.1s
+[CV 3/5] END C=78.47599703514607, penalty=l1, solver=liblinear;, score=0.868 total time=   0.1s
+[CV 4/5] END C=78.47599703514607, penalty=l1, solver=liblinear;, score=0.845 total time=   0.1s
+[CV 5/5] END C=78.47599703514607, penalty=l1, solver=liblinear;, score=0.855 total time=   0.1s
+[CV 1/5] END C=78.47599703514607, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=78.47599703514607, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=78.47599703514607, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=78.47599703514607, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=78.47599703514607, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=206.913808111479, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=206.913808111479, penalty=l1, solver=liblinear;, score=0.882 total time=   0.1s
+[CV 3/5] END C=206.913808111479, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=206.913808111479, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=206.913808111479, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=206.913808111479, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=206.913808111479, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=206.913808111479, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=206.913808111479, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=206.913808111479, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=545.5594781168514, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=545.5594781168514, penalty=l1, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=545.5594781168514, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=545.5594781168514, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=545.5594781168514, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=545.5594781168514, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=545.5594781168514, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=545.5594781168514, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=545.5594781168514, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=545.5594781168514, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=1438.44988828766, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=1438.44988828766, penalty=l1, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=1438.44988828766, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=1438.44988828766, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=1438.44988828766, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=1438.44988828766, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=1438.44988828766, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=1438.44988828766, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=1438.44988828766, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=1438.44988828766, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=3792.690190732246, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=3792.690190732246, penalty=l1, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=3792.690190732246, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=3792.690190732246, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=3792.690190732246, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=3792.690190732246, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=3792.690190732246, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=3792.690190732246, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=3792.690190732246, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=3792.690190732246, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=10000.0, penalty=l1, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=10000.0, penalty=l1, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=10000.0, penalty=l1, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=10000.0, penalty=l1, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=10000.0, penalty=l1, solver=liblinear;, score=0.855 total time=   0.0s
+[CV 1/5] END C=10000.0, penalty=l2, solver=liblinear;, score=0.860 total time=   0.0s
+[CV 2/5] END C=10000.0, penalty=l2, solver=liblinear;, score=0.882 total time=   0.0s
+[CV 3/5] END C=10000.0, penalty=l2, solver=liblinear;, score=0.868 total time=   0.0s
+[CV 4/5] END C=10000.0, penalty=l2, solver=liblinear;, score=0.845 total time=   0.0s
+[CV 5/5] END C=10000.0, penalty=l2, solver=liblinear;, score=0.855 total time=   0.0s
 </pre>
 </div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>GridSearchCV(estimator=LogisticRegression(),
+             param_grid=[{&#39;C&#39;: array([1.00000000e-04, 2.63665090e-04, 6.95192796e-04, 1.83298071e-03,
+       4.83293024e-03, 1.27427499e-02, 3.35981829e-02, 8.85866790e-02,
+       2.33572147e-01, 6.15848211e-01, 1.62377674e+00, 4.28133240e+00,
+       1.12883789e+01, 2.97635144e+01, 7.84759970e+01, 2.06913808e+02,
+       5.45559478e+02, 1.43844989e+03, 3.79269019e+03, 1.00000000e+04]),
+                          &#39;penalty&#39;: [&#39;l1&#39;, &#39;l2&#39;], &#39;solver&#39;: [&#39;liblinear&#39;]}],
+             verbose=3)</pre>
+</div>
+
 </div>
 
 </div>
@@ -15928,7 +16137,7 @@ GridSearchCV(estimator=LogisticRegression(),              param_grid=[{&#39;C&#3
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
@@ -15965,7 +16174,7 @@ GridSearchCV(estimator=LogisticRegression(),              param_grid=[{&#39;C&#3
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model2</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -16011,7 +16220,7 @@ Gender_Male: 	 0.2872513027888645
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">joblib</span> <span class="kn">import</span> <span class="n">dump</span><span class="p">,</span> <span class="n">load</span>
@@ -16032,7 +16241,7 @@ Gender_Male: 	 0.2872513027888645
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 
 
 
@@ -16050,16 +16259,12 @@ Gender_Male: 	 0.2872513027888645
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model3</span><span class="o">=</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;attrition_pred.lrm&#39;</span><span class="p">)</span>
 <span class="n">scaler</span><span class="o">=</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;lrm.scaler&#39;</span><span class="p">)</span>
 <span class="n">test</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1m OLD: </span><span class="se">\033</span><span class="s2">[0;0m&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">modelResults</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1m NEW: </span><span class="se">\033</span><span class="s2">[0;0m&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">test</span><span class="p">))</span>
 </pre></div>
 
@@ -16080,19 +16285,7 @@ Gender_Male: 	 0.2872513027888645
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-bold"> OLD: </span>
-              precision    recall  f1-score   support
-
-           0       0.87      0.35      0.50      1233
-           1       0.18      0.74      0.29       237
-
-    accuracy                           0.41      1470
-   macro avg       0.53      0.54      0.39      1470
-weighted avg       0.76      0.41      0.46      1470
-
- 
-<span class="ansi-bold"> NEW: </span>
-              precision    recall  f1-score   support
+<pre>              precision    recall  f1-score   support
 
            0       0.89      0.91      0.90      1233
            1       0.47      0.43      0.45       237
@@ -16115,7 +16308,7 @@ weighted avg       0.82      0.83      0.83      1470
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scoresDF</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;finalScoresDF.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scoresDF</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;scoresDF7.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
