@@ -17,7 +17,7 @@ Create a Machine Learning Model to predict the retention of employees using a da
 
 ## How to run the app
 2 options:
-1. **[Fully deployed online version](https://dataviz-ecobici.herokuapp.com/)**: *Coming soon*
+1. [Fully deployed online version](https://predicting-attrition.herokuapp.com/)
 2. Run locally:
      1. Clone this repository
      2. In the main repository folder, run "python3 XXXX.py" in your terminal
