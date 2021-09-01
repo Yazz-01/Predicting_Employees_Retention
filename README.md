@@ -16,11 +16,13 @@
 Create a Machine Learning Model to predict the retention of employees using a data set from IBM. 
 
 ## How to run the app
-2 options:
-1. [Fully deployed online version](https://predicting-attrition.herokuapp.com/)
+Click on the following link to check the app,Data Analysis in Tableau and the Machine Learning and Deep Learnig models :
+
+1. [Fully deployed online version CLICK HERE!!](https://predicting-attrition.herokuapp.com/) to go directly to the app online.
+
 2. Run locally:
      1. Clone this repository
-     2. In the main repository folder, run "python3 XXXX.py" in your terminal
+     2. In the main repository folder, run "python3 app.py" in your terminal
      3. Open [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in a browser and the website should launch. 
      4. Browse the website...
 
@@ -29,22 +31,25 @@ The original data can be found here at [**Kaggle**](https://www.kaggle.com/pavan
 
 ## ETL Process 
 #### Extract
-- *Coming soon*
+- Download the original HR dataset from IBM
 #### Transform
-- *Coming soon*
+- Run numerous Machine Learning trials using sklearn, TensorFlow and Keras in Jupyter Notebook
+- Create executive summary data visualizations in Tableau
 #### Load
-- *Coming soon*
+- Use Flask to run the application online. 
+- Create website using Bootstrap 5.
+- Create interactive retention predictor dashboard using Javascript, which calls a route in Flask to produce the machine learning algorithm in Python. 
+- Embed our Tableau visualizations and Jupyter Notebook on informational pages within the website.  
 
 ## Languages & Tools Used 🖥️
 - Python
 - Jupyter Notebook
-- TensorFlow & Keras libraries
+- Sklearn, TensorFlow & Keras libraries
+- Flask
 - Javascript
 - HTML 
 - CSS 
 
-## Conclusion summary 
-- *Coming soon*
 
 
 
