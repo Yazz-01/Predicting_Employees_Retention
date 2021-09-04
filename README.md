@@ -2,7 +2,7 @@
 ## *Machine Learning Model to predict the retention of employees*
 
 <p align="center">
-<img src="https://github.com/Yazz-01/Predicting_Employees_Retention/blob/main/static/img/screenshot.png" width="900"/>
+<img src="https://github.com/Yazz-01/Predicting_Employees_Retention/blob/main/static/img/app-tour.gif" width="900"/>
 </p>
 
 ## Team Members
